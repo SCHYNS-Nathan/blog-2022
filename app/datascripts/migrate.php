@@ -1,7 +1,7 @@
 <?php
-const DSN = 'mysql:host=127.0.0.1;port=3306';
+const DSN = 'mysql:host=database;port=3306;dbname=blog';
 try {
-    $pdo = new PDO(DSN, 'root', '',
+    $pdo = new PDO(DSN, 'mysql', 'mysql',
         [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 } catch (PDOException $e) {
     var_dump($e);

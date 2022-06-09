@@ -51,12 +51,14 @@
                                         <span class="font-light text-gray-600">
                                             <?= (new DateTime($post->post_published_at))->format('M j, Y - G:i') ?>
                                         </span>
-                                        <?php foreach ($post->post_categories as $category): ?>
-                                            <a href="/?action=index&resource=post&category=<?= $category->category_slug ?>"
-                                               class="px-2 py-1 font-bold text-gray-100 bg-gray-600 rounded hover:bg-gray-500">
-                                                <?= ucwords($category->category_name) ?>
-                                            </a>
-                                        <?php endforeach ?>
+                                        <div>
+                                            <?php foreach ($post->post_categories as $category): ?>
+                                                <a href="/?action=index&resource=post&category=<?= $category->category_slug ?>"
+                                                   class="px-2 py-1 font-bold text-gray-100 bg-gray-600 rounded hover:bg-gray-500 ml-4">
+                                                    <?= ucwords($category->category_name) ?>
+                                                </a>
+                                            <?php endforeach ?>
+                                        </div>
                                     </div>
                                     <h2 class="mt-2">
                                         <a href="/?action=show&resource=post&&slug=<?= $post->post_slug ?>"

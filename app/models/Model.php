@@ -7,9 +7,9 @@ use PDOException;
 
 class Model
 {
-    private const DSN = 'mysql:host=127.0.0.1;dbname=blog;port=3306';
-    private const MYSQL_USER = 'root';
-    private const MYSQL_PWD = '';
+    private const DSN = 'mysql:host=database;port=3306;dbname=blog';
+    private const MYSQL_USER = 'mysql';
+    private const MYSQL_PWD = 'mysql';
     private const PDO_OPTIONS = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
